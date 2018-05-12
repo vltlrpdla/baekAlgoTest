@@ -22,6 +22,8 @@ public class AplusB {
 		}
 		
 		System.out.println("A + B : " + (A + B));
+		
+		scn.close();
 	}
 
 }
