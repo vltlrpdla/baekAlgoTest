@@ -12,9 +12,9 @@ public class SugarDelivery {
 		int amount_plasticBag_3Kg = 0;
 		
 		if( remainDivBy5 == 0 ){
-			System.out.print("5kgºÀÁö:" + amount_plasticBag_5Kg);
+			System.out.print("5kgë´‰ì§€:" + amount_plasticBag_5Kg);
 		}else if(remainDivBy5 == 3){
-			System.out.print("5kgºÀÁö:" + amount_plasticBag_5Kg + "\n3kgºÀÁö:" + 1);
+			System.out.print("5kgë´‰ì§€:" + amount_plasticBag_5Kg + "\n3kgë´‰ì§€:" + 1);
 		}else if(amount_plasticBag_5Kg > 0){
 			
 			while(amount_plasticBag_5Kg >= 0){
@@ -25,7 +25,7 @@ public class SugarDelivery {
 				if (amount_plasticBag_5Kg == -1){
 					System.out.print("-1");
 				}else if( remainderDivByN(amountOfSugar - (5 * amount_plasticBag_5Kg ), 3) == 0 ){
-					System.out.print("5kgºÀÁö:" + amount_plasticBag_5Kg + "\n3kgºÀÁö:" + amount_plasticBag_3Kg);
+					System.out.print("5kgë´‰ì§€:" + amount_plasticBag_5Kg + "\n3kgë´‰ì§€:" + amount_plasticBag_3Kg);
 					break;
 				}
 				
