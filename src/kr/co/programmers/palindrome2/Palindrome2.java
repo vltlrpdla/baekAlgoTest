@@ -6,7 +6,7 @@ public class Palindrome2 {
 
 	public static void main(String[] args) {
 		
-		String s = "abcdcba";
+		String s = "aaavaa";
 		int answer = solution(s);
 		System.out.println("answer :" + answer);
 	
@@ -24,6 +24,7 @@ public class Palindrome2 {
 				}
 			}
 		}
+		answer = 1;
 		return answer;
 	}
 	

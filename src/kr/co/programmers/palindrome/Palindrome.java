@@ -8,27 +8,19 @@ public class Palindrome {
 		
 		String s = "abcdcbadd";
 		
-		solution(s);
+		System.out.print("answer  : "  + solution(s));
 		
 		
 	}
-	
-	public static void solution(String s){
+	// 성능 상의 문제 왜 재귀 호출은 성능상의 문제를 안고 있을까 ? 함수의 변경 --> 콘텍스트 스위치 메모리 공간이 그만큼 더 필요함 
+	public static int solution(String s){
 		int answer = s.length();
 		
-		if ( (answer % 2) == 0) {
-			solution(s.substring(0, answer - 1 ));
-			solution(s.substring(1,answer));
-		}else if ( (answer >= 3) && isPalindrome(s)){
-			System.out.println(answer + "길이의 펠린드롬");
-		}else if ( answer > 3){
-			solution(s.substring(0, answer - 2 ));
-			solution(s.substring(1, answer - 1 ));
-			solution(s.substring(2, answer ));
+		if( isPalindrome(s) || answer == 1 ){
+			return s.length();
 		}else{
-			System.out.println("없다 !");
+			return Math.max(solution(s.substring( 0 , answer - 1)), solution(s.substring( 1 , answer )));
 		}
-		
 	}
 	
 	public static boolean isPalindrome(String param){
